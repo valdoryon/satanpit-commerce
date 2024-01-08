@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'brand-main-font';
+  src: url('/fonts/NovaSquare-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'brand-secondary-font';
+  src: url('/fonts/OpenSans-Font.ttf');
+}
+
+$brand-main-font: 'brand-main-font';
+$brand-secondary-font: 'brand-secondary-font';
