@@ -113,6 +113,7 @@ const ProductsPage = () => {
               <ProductCard
                 key={element.clothes_id}
                 title={element.clothes_name}
+                category={element.clothes_category}
                 price={element.clothes_price}
                 imageURL={element.clothes_image || null}
               />

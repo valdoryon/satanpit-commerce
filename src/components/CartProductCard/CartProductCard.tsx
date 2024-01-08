@@ -29,7 +29,7 @@ const CartProductCard = (props: CartProductCardProps) => {
           <h3>{props.cartproduct_name.toUpperCase()}</h3>
           <span>${props.cartproduct_price}</span>
           <span>Color: {props.cartproduct_color}</span>
-          <span>Size: {props.cartproduct_size}</span>
+          <span>Talle: {props.cartproduct_size}</span>
         </div>
       </div>
 

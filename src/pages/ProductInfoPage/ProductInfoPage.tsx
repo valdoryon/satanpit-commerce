@@ -18,15 +18,18 @@ const ProductInfoPage = () => {
   const [quantity, setQuantity] = useState(1);
 
   const { product } = useParams();
-  const selectedSize = searchParams.get('size') || 'm';
-  const selectedColor = searchParams.get('color') || 'black';
+  const selectedSize = searchParams.get('size') || 's';
+  const selectedColor = searchParams.get('color') || 'negro';
 
   const BASE_URL = `http://localhost:3001/v1/product/${product}`;
 
   const { data } = useFetch(BASE_URL);
 
-  const sizeVariants = ['xs', 's', 'm', 'l', 'xl', 'xxl'];
-  const colorVariants = ['black', 'white', 'red', 'blue'];
+  const sizeVariants =
+    data[0]?.clothes_category === 'pantalones'
+      ? ['38', '40', '42', '44', '46', '48']
+      : ['xs', 's', 'm', 'l', 'xl', 'xxl'];
+  const colorVariants = ['negro', 'blanco', 'rojo', 'azul'];
 
   const addCart = useCartStore((state) => state.addNewCartItem);
 

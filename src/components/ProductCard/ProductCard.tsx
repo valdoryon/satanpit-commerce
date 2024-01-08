@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 
 interface ProductCardProps {
   title: string;
+  category: string;
   price: number;
   imageURL?: string | null;
 }
@@ -9,7 +10,11 @@ interface ProductCardProps {
 const ProductCard = (props: ProductCardProps) => {
   return (
     <div className='product-card__container'>
-      <Link to={`/producto/${props.title}?size=m&color=black`}>
+      <Link
+        to={`/producto/${props.title}?size=${
+          props.category === 'pantalones' ? '38' : 's'
+        }&color=negro`}
+      >
         <img
           src={
             props.imageURL || 'http://localhost:3001/images/image_not-found.png'

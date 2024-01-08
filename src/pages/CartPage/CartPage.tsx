@@ -35,7 +35,7 @@ const CartPage = () => {
       <>
         <Navbar />
         <div className='cart-page_container'>
-          <h1>YOUR CART IS EMPTY</h1>
+          <h1>TU CARRITO ESTA VACÍO</h1>
         </div>
         <Footer />
       </>
@@ -47,7 +47,7 @@ const CartPage = () => {
       <Navbar />
       <div className='cart-page_container'>
         <div className='cart-page_products-container'>
-          <h2>SHOPPING CART</h2>
+          <h2>CARRITO</h2>
           <div className='spacer' />
           {myCart.map((product) => (
             <Fragment
@@ -76,31 +76,31 @@ const CartPage = () => {
 
         <div className='cart-page_checkout'>
           <div className='cart-page_total'>
-            <h2>ORDER SUMMARY</h2>
+            <h2>RESUMEN DE ORDEN</h2>
             <div className='spacer' />
           </div>
           <div className='cart-page_cost-details'>
             <div className='cart-page_detail'>
               <span>Subtotal</span>
               <span>${getTotal()}</span>
-              <span>Taxes</span>
+              <span>impuestos</span>
               <span>$0</span>
-              <span>Shipment</span>
-              <span>FREE!</span>
+              <span>envío</span>
+              <span>GRATIS!</span>
             </div>
 
             <div className='cart-page_estimated-total'>
-              <span>Estimated Total</span>
+              <span>Total estimado</span>
               <span>${getTotal()}</span>
             </div>
           </div>
           <div className='spacer' />
           <div className='cart-page_buttons'>
-            <span>Duties and regional taxes NOT included</span>
+            <span>Deberes e impuestos regionales NO incluídos</span>
             <button className='button main-button'>Checkout</button>
           </div>
           <div className='cart-page_payment-methods'>
-            <span>Accepted payment methods</span>
+            <span>Métodos de pago aceptados</span>
             <div>
               <img src={VisaLogo} alt='visa logo' />
               <img src={MasterCardLogo} alt='mastercard logo' />

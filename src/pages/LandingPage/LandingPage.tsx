@@ -37,7 +37,7 @@ const LandingPage = () => {
         />
       </div>
       <ImageSlider
-        toURL='/search'
+        toURL=''
         alt='Discover us'
         rel='preload'
         loading='lazy'
