@@ -9,14 +9,15 @@ const LandingPage = () => {
   return (
     <>
       <Navbar />
-
-      <ImageSlider
-        toURL='/search/verano 24'
-        rel='preload'
-        alt='Band'
-        loading='lazy'
-        imageURL={'image_background-band.webp'}
-      />
+      <div className='landing-page__slider-container'>
+        <ImageSlider
+          toURL='/search/verano 24'
+          rel='preload'
+          alt='Band'
+          loading='lazy'
+          imageURL={'image_background-band.webp'}
+        />
+      </div>
       <div className='landing-page__clothes-category-cards'>
         <ClothesCategoryCard
           imageURL={'/image_bassist-player.webp'}
@@ -36,13 +37,15 @@ const LandingPage = () => {
           linkUrl='/search/buzos'
         />
       </div>
-      <ImageSlider
-        toURL=''
-        alt='Discover us'
-        rel='preload'
-        loading='lazy'
-        imageURL='/image_discoverus.webp'
-      />
+      <div className='landing-page__slider-container'>
+        <ImageSlider
+          toURL=''
+          alt='Discover us'
+          rel='preload'
+          loading='lazy'
+          imageURL='/image_discoverus.webp'
+        />
+      </div>
       <Footer />
     </>
   );

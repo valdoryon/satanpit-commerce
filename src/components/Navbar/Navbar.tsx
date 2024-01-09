@@ -8,7 +8,6 @@ const Navbar = () => {
       <div style={{ display: 'flex', alignContent: 'center' }}>
         <a
           onClick={(e) => {
-            //POR LAS DUDAS, MIRAR BIEN PORQUE EN OTRA PAGINA QUIERO VOLVER A LA LANDING.
             if (window.scrollY === 0) return;
             e.preventDefault();
             window.scrollTo(0, 0);
@@ -17,8 +16,8 @@ const Navbar = () => {
           href='/'
         >
           Satan's Pit
+          <img className='commerce-logo' src='/icons/commerce-logo.svg' />
         </a>
-        <img className='commerce-logo' src='/icons/commerce-logo.svg' />
       </div>
       <div className='navbar-links'>
         <Link className='nav-link' to={'/search/hombre'}>

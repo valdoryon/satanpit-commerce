@@ -25,11 +25,9 @@ const ProductInfoPage = () => {
 
   const { data } = useFetch(BASE_URL);
 
-  const sizeVariants =
-    data[0]?.clothes_category === 'pantalones'
-      ? ['38', '40', '42', '44', '46', '48']
-      : ['xs', 's', 'm', 'l', 'xl', 'xxl'];
-  const colorVariants = ['negro', 'blanco', 'rojo', 'azul'];
+  const sizeVariants = ['s', 'm', 'l', 'xl'];
+
+  const colorVariants = ['negro', 'blanco', 'rojo'];
 
   const addCart = useCartStore((state) => state.addNewCartItem);
 
@@ -69,7 +67,7 @@ const ProductInfoPage = () => {
           <div className='product-info-page__options'>
             <h3>TALLES</h3>
             <div>
-              {sizeVariants.map((size) => (
+              {sizeVariants?.map((size) => (
                 <SizeSelector
                   key={size}
                   size={size}
@@ -82,7 +80,7 @@ const ProductInfoPage = () => {
           <div className='product-info-page__options'>
             <h3>COLORES</h3>
             <div>
-              {colorVariants.map((color) => (
+              {colorVariants?.map((color) => (
                 <ColorSelector
                   key={color}
                   color={color}

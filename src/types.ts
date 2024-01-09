@@ -6,6 +6,8 @@ export interface ClothesType {
   clothes_category: string;
   clothes_gender: string;
   clothes_material: string;
+  clothes_color: string[];
+  clothes_sizes: string[];
   clothes_stock: number;
   clothes_price: number;
 }

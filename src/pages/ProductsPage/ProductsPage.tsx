@@ -44,8 +44,6 @@ const ProductsPage = () => {
     BASE_URL = BASE_URL + `?sort=${sortQuery}`;
   }
 
-  console.log(BASE_URL);
-
   const { data, loading } = useFetch(
     BASE_URL,
     searchBarQuery ? searchBarQuery : ''
@@ -113,7 +111,6 @@ const ProductsPage = () => {
               <ProductCard
                 key={element.clothes_id}
                 title={element.clothes_name}
-                category={element.clothes_category}
                 price={element.clothes_price}
                 imageURL={element.clothes_image || null}
               />
