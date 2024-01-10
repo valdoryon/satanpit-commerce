@@ -1,6 +1,6 @@
 {
-  "version": 2,
-  "name": "cardsApi",
+  "version": 1,
+  "name": "clothesApi",
   "builds": [
     {
       "src": "./src/index.js",
@@ -9,8 +9,8 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "/"
+      "src": "/v1/(.*)",
+      "dest": "/v1/$1"
     }
   ]
 }
