@@ -646,13 +646,19 @@
     padding: 1rem;
     gap: 1rem;
     position: sticky;
+    z-index: 99;
     top: 6rem;
     margin: 0;
     background-color: colors.$main-text-color_lg;
+
+    a {
+      font-size: 0.6rem;
+    }
   }
 
   .products-page__options-groups {
     flex-direction: row;
+    gap: 0.5rem;
     flex-wrap: wrap;
   }
 
