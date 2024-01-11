@@ -11,7 +11,7 @@ const authenticateApiKey = require('./middleware/AuthenticateApiKey');
 const { client } = require('./databasepg');
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3000;
 
 //Cors import & options
 const corsOptions = {
