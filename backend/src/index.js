@@ -7,11 +7,11 @@ require('dotenv').config({
 });
 
 //Importing middlewares
-const authenticateApiKey = require('./src/middleware/AuthenticateApiKey');
-const { client } = require('./src/databasepg');
+const authenticateApiKey = require('./middleware/AuthenticateApiKey');
+const { client } = require('./databasepg');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 //Cors import & options
 // const corsOptions = {
