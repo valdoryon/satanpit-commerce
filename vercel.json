@@ -1,6 +1,6 @@
 {
   "rewrites": {
     "source": "/search/todos?q=(.*)",
-    "destination": "/search/todos?q=1$"
+    "destination": "/"
   }
 }
