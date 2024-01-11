@@ -20,9 +20,7 @@ const CartProductCard = (props: CartProductCardProps) => {
         <img
           alt='clothes'
           src={
-            props.cartproduct_image
-              ? props.cartproduct_image
-              : 'http://localhost:3001/images/image_not-found.png'
+            props.cartproduct_image || import.meta.env.VITE_API_IMG_NOT_FOUND
           }
         />
         <div className='cart-product-card_info'>

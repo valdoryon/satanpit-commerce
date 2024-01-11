@@ -8,7 +8,7 @@ import {
 import { useFetch } from '../../hook/useFetch';
 
 const ProductsPage = () => {
-  let BASE_URL = 'http://localhost:3001/v1/clothes/';
+  let BASE_URL = import.meta.env.VITE_API_CLOTHES_URL!;
 
   const collection = [
     'TODOS',
@@ -106,6 +106,7 @@ const ProductsPage = () => {
           }
         </div>
         <div className='products-page__products-container'>
+          {loading ? <h3>Loading...</h3> : null}
           {data.map((element) => {
             return (
               <ProductCard

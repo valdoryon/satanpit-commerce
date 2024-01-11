@@ -217,28 +217,34 @@
 //PRODUCTS CONTAINER
 .products-page__products-container {
   display: grid;
-  gap: 2rem;
   grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  row-gap: 2rem;
 }
 
 //PRODUCT CARD STYLES
 .product-card__container {
+  box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.75);
+  border-radius: 0.5rem;
   img {
+    border-radius: 0.5rem;
     cursor: pointer;
-    object-fit: cover;
     width: 100%;
-    height: auto;
+    height: 500px;
+    object-fit: fill;
   }
+}
 
-  img:hover {
-    outline: 1px solid colors.$main-text-color_drk;
-  }
+.product-card__container:hover {
+  transition: all 200ms ease-in-out;
+  transform: scale(1.02);
 }
 
 .product-card__info {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  padding: 1rem;
   text-align: left;
 
   h5 {

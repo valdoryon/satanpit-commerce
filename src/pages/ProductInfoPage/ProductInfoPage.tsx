@@ -21,9 +21,9 @@ const ProductInfoPage = () => {
   const selectedSize = searchParams.get('size') || 's';
   const selectedColor = searchParams.get('color') || 'negro';
 
-  const BASE_URL = `http://localhost:3001/v1/product/${product}`;
+  const BASE_URL = import.meta.env.VITE_API_PRODUCT_URL! + product;
 
-  const { data } = useFetch(BASE_URL);
+  const { data } = useFetch(BASE_URL!);
 
   const sizeVariants = ['s', 'm', 'l', 'xl'];
 
@@ -54,8 +54,7 @@ const ProductInfoPage = () => {
           <img
             alt={data[0]?.clothes_name}
             src={
-              data[0]?.clothes_image ||
-              'http://localhost:3001/images/image_not-found.png'
+              data[0]?.clothes_image || import.meta.env.VITE_API_IMG_NOT_FOUND
             }
           />
         </div>

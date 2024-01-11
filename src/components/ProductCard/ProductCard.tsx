@@ -11,13 +11,12 @@ const ProductCard = (props: ProductCardProps) => {
     <div className='product-card__container'>
       <Link to={`/producto/${props.title}`}>
         <img
-          src={
-            props.imageURL || 'http://localhost:3001/images/image_not-found.png'
-          }
+          src={props.imageURL || import.meta.env.VITE_API_IMG_NOT_FOUND}
           rel='preload'
           alt={props.title}
         />
       </Link>
+      <div className='spacer' />
       <div className='product-card__info'>
         <h5>{props.title}</h5>
         <span>${props.price}</span>
