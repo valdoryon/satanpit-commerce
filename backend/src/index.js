@@ -109,10 +109,12 @@ app.get('/v1/product/:product', authenticateApiKey, async (req, res) => {
   }
 });
 
-module.exports = app;
 // Serve static files from the 'backend' folder. images
 //app.use('/images', express.static('backend/images'));
 
-// app.listen(PORT, () => {
-//   console.log(`Server running on port ${PORT}`);
-// });
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
+// Export the express API
+module.exports = app;
