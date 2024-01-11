@@ -7,8 +7,8 @@ require('dotenv').config({
 });
 
 //Importing middlewares
-const authenticateApiKey = require('./middleware/AuthenticateApiKey');
-const { client } = require('./databasepg');
+const authenticateApiKey = require('../src/middleware/AuthenticateApiKey');
+const { client } = require('../src/databasepg');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -110,8 +110,10 @@ app.get('/v1/product/:product', authenticateApiKey, async (req, res) => {
 });
 
 // Serve static files from the 'backend' folder. images
-app.use('/images', express.static('backend/images'));
+//app.use('/images', express.static('backend/images'));
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Server running on port ${PORT}`);
+// });
+
+module.exports = app;
