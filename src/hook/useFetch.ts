@@ -29,7 +29,7 @@ export const useFetch = (API: string, filterQuery?: string) => {
       const response = await fetch(API, {
         mode: 'cors',
         headers: {
-          'x-api-key': 'MjE5ODcyYTg0YzNkNTExNzc4YTkzYzE=',
+          'x-api-key': import.meta.env.VITE_API_KEY,
         },
         signal: abortControllerRef.current?.signal,
       });
